@@ -225,7 +225,7 @@ for q_learning_agent in q_learning_agents:
     result = q_learning_agent.test(env, 100)
     results_test.append(result)
 
-# plota os resultados
+# plota os resultados dos treinamentos
 #for i in range(8):
 #    plt.plot(np.cumsum(results_train[i]), label=f'Hiperparâmetros {i+1}')
 plt.figure()
@@ -240,6 +240,7 @@ plt.legend()
 plt.title('Comparação entre Agente Q-learning com diferentes hiperparâmetros')
 plt.show()
 
+# plota os resultados dos testes
 plt.figure()
 plt.plot(np.cumsum(results_test[0]), label='G:0.9, A:0.1, E:0.1')
 plt.plot(np.cumsum(results_test[1]), label='G:0.9, A:0.5, E:0.1')
@@ -250,4 +251,14 @@ plt.xlabel('Episódios')
 plt.ylabel('Recompensa Total')
 plt.legend()
 plt.title('Testes com os agentes Treinados')
+plt.show()
+
+# plota a recompensa média acumulada para cada agente
+plt.figure()
+for i in range(8):
+    plt.plot(np.cumsum(results_train[i])/np.arange(1, len(results_train[i])+1), label=f'Hiperparâmetros {i+1}')
+plt.xlabel('Iterações')
+plt.ylabel('Recompensa Média Acumulada')
+plt.legend()
+plt.title('Convergência dos Agentes Q-learning com diferentes hiperparâmetros')
 plt.show()

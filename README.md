@@ -2,11 +2,11 @@
 
 ## Descrição
 
-Esse repositorio é uma atividade realizanda durando a disciplica Advanced Deep Learning - PPGEE - UFPA.
+Esse repositorio é uma atividade realizanda durante a disciplica Advanced Deep Learning - PPGEE - UFPA.
 
 ## Descrição da atividade
 
-Nesta parte, cada estudante deve usar seu próprio ambiente FMDP personalizado.
+Cada estudante deve usar seu próprio ambiente FMDP personalizado.
 
 1. Encontre o v* (valores de estado) ótimo, q* (valores de ação) e política . Descreva a
 política de uma maneira que possamos entender facilmente seu significado. Olhe para o
